@@ -1,10 +1,23 @@
 ---
 title: Chapter 1
 created: '2020-05-14T16:21:07.954Z'
-modified: '2020-05-14T17:10:31.380Z'
+modified: '2020-05-15T08:51:09.410Z'
 ---
 
 # Chapter 1
+## Summary
+
+### Perceptrons
+For a perceptron, the following is true about the output:
+$0$ if $w\cdot x + b \leq 0$
+$1$ if $w\cdot x + b > 0$
+
+### Sigmoids
+$\sigma(z) \equiv \frac{1}{1+e^{-z}}$ where $z = w\cdot x + b$
+
+
+
+
 ## Exercises
 
 ### Sigmoid neurons simulating perceptrons, part I
