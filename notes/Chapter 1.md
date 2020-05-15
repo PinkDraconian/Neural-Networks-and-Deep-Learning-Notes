@@ -1,7 +1,8 @@
 ---
+attachments: [Clipboard_2020-05-15-10-57-37.png]
 title: Chapter 1
 created: '2020-05-14T16:21:07.954Z'
-modified: '2020-05-15T08:51:09.410Z'
+modified: '2020-05-15T09:09:23.812Z'
 ---
 
 # Chapter 1
@@ -42,3 +43,37 @@ If we multiply our weights and biases by $10^{1000}$:
 - Sigmoid: $\frac{1}{1\:+\:e^{-\left(20^{1000}\:+\:40^{1000}\right)}} = 1$
 
 However, when $w⋅x+b=0$, then our sigmoid function will return $0.5$, which will remain the case even after multiplying all weights and biases.
+
+### A simple network to classify handwritten digits
+> There is a way of determining the bitwise representation of a digit by adding an extra layer to the three-layer network above. The extra layer converts the output from the previous layer into a binary representation, as illustrated in the figure below. Find a set of weights and biases for the new output layer. Assume that the first 3 layers of neurons are such that the correct output in the third layer (i.e., the old output layer) has activation at least 0.99, and incorrect outputs have activation less than 0.01. ![](@attachment/Clipboard_2020-05-15-10-57-37.png)
+
+First, we map the digits to their binary representation
+$0 = 0000$, $1 = 0001$, $2 = 0010$, $3 = 0011$, $4 = 0100$, $5 = 0101$, $6 = 0110$, $7 = 0111$, $8 = 1000$, $9 = 1001$
+
+We see that the first output neuron should only fire when the answer is 8 or 9, therefor, if we set all the weights to $0$ but $w_{8} = 1$ and $w_{9} = 1$, we can then set $b = 0$.
+That process can be repeated for the 3 other output neurons.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
