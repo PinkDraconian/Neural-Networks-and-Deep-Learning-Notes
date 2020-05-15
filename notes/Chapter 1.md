@@ -2,7 +2,7 @@
 attachments: [Clipboard_2020-05-15-10-57-37.png]
 title: Chapter 1
 created: '2020-05-14T16:21:07.954Z'
-modified: '2020-05-15T09:09:23.812Z'
+modified: '2020-05-15T09:32:42.832Z'
 ---
 
 # Chapter 1
@@ -16,8 +16,20 @@ $1$ if $w\cdot x + b > 0$
 ### Sigmoids
 $\sigma(z) \equiv \frac{1}{1+e^{-z}}$ where $z = w\cdot x + b$
 
+### Cost / Loss function
+$C$ is the quadratic cost function or mean squared error (MSE) function
+$C(w,b) \equiv \frac{1}{2n} \sum_x \| y(x) - a\|^2$
+- $w$ is the collection of all weights in the model
+- $b$ is the collection of all biases in the model
+- $n$ is the total number of training samples
+- $a$ is the vector of outputs from the network when $x$ is an input
+- $x$ are all the training inputs
+- $\|v\|$ denotes the length of the vector $v$
 
+Why a loss function? We want to find a way to minimize the error in our network that also changes with small changes in our weights and biases.
 
+### Gradient descent vector
+$\Delta C \approx \nabla C \cdot \Delta v$ where $\nabla C \equiv \left(\frac{\partial C}{\partial v_1}, \ldots, \frac{\partial C}{\partial v_m}\right)^T$
 
 ## Exercises
 
