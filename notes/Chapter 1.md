@@ -2,7 +2,7 @@
 attachments: [Clipboard_2020-05-15-10-57-37.png]
 title: Chapter 1
 created: '2020-05-14T16:21:07.954Z'
-modified: '2020-05-15T09:32:42.832Z'
+modified: '2020-05-15T09:46:17.515Z'
 ---
 
 # Chapter 1
@@ -65,9 +65,15 @@ $0 = 0000$, $1 = 0001$, $2 = 0010$, $3 = 0011$, $4 = 0100$, $5 = 0101$, $6 = 011
 We see that the first output neuron should only fire when the answer is 8 or 9, therefor, if we set all the weights to $0$ but $w_{8} = 1$ and $w_{9} = 1$, we can then set $b = 0$.
 That process can be repeated for the 3 other output neurons.
 
+### Learning with gradient descent, part I
+> Prove the assertion of the last paragraph. Hint: If you're not already familiar with the [Cauchy-Schwarz inequality](https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality), you may find it helpful to familiarize yourself with it.
 
+Wasn't able to successfully solve. I found this section to be very hard to envision mathematically.
 
+### Learning with gradient descent, part II
+> I explained gradient descent when C is a function of two variables, and when it's a function of more than two variables. What happens when C is a function of just one variable? Can you provide a geometric interpretation of what gradient descent is doing in the one-dimensional case?
 
+With just one variable, we have to find the minimum of line which can be done by derivation.
 
 
 
