@@ -2,7 +2,7 @@
 attachments: [Clipboard_2020-05-15-10-57-37.png]
 title: Chapter 1
 created: '2020-05-14T16:21:07.954Z'
-modified: '2020-05-15T09:46:17.515Z'
+modified: '2020-05-16T08:15:49.580Z'
 ---
 
 # Chapter 1
@@ -30,6 +30,11 @@ Why a loss function? We want to find a way to minimize the error in our network 
 
 ### Gradient descent vector
 $\Delta C \approx \nabla C \cdot \Delta v$ where $\nabla C \equiv \left(\frac{\partial C}{\partial v_1}, \ldots, \frac{\partial C}{\partial v_m}\right)^T$
+$w_k \rightarrow w_k' = w_k-\eta \frac{\partial C}{\partial w_k}$
+$b_l \rightarrow b_l' = b_l-\eta \frac{\partial C}{\partial b_l}$
+
+Issue? Since the cost function requires us to calculate every training input and take the average. This means that for large training sets, learning can be very slow.
+Solution? Stochastic gradient descent, taking a random sample of input to calculate the cost.
 
 ## Exercises
 
@@ -75,7 +80,11 @@ Wasn't able to successfully solve. I found this section to be very hard to envis
 
 With just one variable, we have to find the minimum of line which can be done by derivation.
 
+### Learning with gradient descent, part III
+> An extreme version of gradient descent is to use a mini-batch size of just $1$. That is, given a training input, $x$, we update our weights and biases according to the rules $wk→w′k=wk−η∂Cx/∂wk and bl→b′l=bl−η∂Cx/∂bl$. Then we choose another training input, and update the weights and biases again. And so on, repeatedly. This procedure is known as online, on-line, or incremental learning. In online learning, a neural network learns from just one training input at a time (just as human beings do). Name one advantage and one disadvantage of online learning, compared to stochastic gradient descent with a mini-batch size of, say, $20$.
 
+Advantage: It's 20 times faster than a stochastic gradient descent with a mini-batch size of $20$
+Disadvantage: The cost function could be very far away from the actual cost function across the whole training set.
 
 
 
