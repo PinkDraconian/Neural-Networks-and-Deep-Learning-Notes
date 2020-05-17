@@ -2,7 +2,7 @@
 attachments: [Clipboard_2020-05-15-10-57-37.png]
 title: Chapter 1
 created: '2020-05-14T16:21:07.954Z'
-modified: '2020-05-16T08:15:49.580Z'
+modified: '2020-05-17T08:28:27.038Z'
 ---
 
 # Chapter 1
@@ -86,10 +86,14 @@ With just one variable, we have to find the minimum of line which can be done by
 Advantage: It's 20 times faster than a stochastic gradient descent with a mini-batch size of $20$
 Disadvantage: The cost function could be very far away from the actual cost function across the whole training set.
 
+### Implementing our network to classify digits
+> Write out Equation $a' = \sigma(w a + b)$ in component form, and verify that it gives the same result as the rule $\frac{1}{1+\exp(-\sum_j w_j x_j-b)}$ for computing the output of a sigmoid neuron. 
 
-
-
-
+$a' = \sigma(w a + b)$
+<=>  (Dot product to sum)
+$a' = \sigma(\sum_j w_j x_j - b)$  
+<=> ($\sigma(z) \equiv \frac{1}{1+e^{-z}}$)
+$a' = \frac{1}{1 + e^{-\sum w_j x_j-b}}$
 
 
 
